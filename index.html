@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Back-ground-changer</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px 100px;
+            background-color: darkmagenta;
+        }
+        
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: gold;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+        
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 2px solid gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        #white {
+            background-color: white;
+        }
+        
+        #aqua {
+            background-color: aqua;
+        }
+        
+        #violet {
+            background-color: violet;
+        }
+        
+        #black {
+            background-color: black;
+        }
+        
+        #color-switcher {
+            text-align: right;
+        }
+        /* to do list css */
+        /* body {
+            background: linear-gradient(120deg, pink, purple);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        } */
+        
+        header,
+        form {
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header {
+            font-size: 40px;
+        }
+        
+        form input,
+        form button {
+            padding: 10px;
+            border: none;
+            font-size: 24px;
+            background: rgb(153, 255, 80);
+            outline: none;
+        }
+        
+        form button {
+            color: purple;
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            color: white;
+            background-color: skyblue;
+        }
+        /* ----------------New List Container----------------- */
+        
+        .todo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .todo-list {
+            list-style: none;
+            min-width: 25%;
+        }
+        
+        .todo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-color: white;
+            color: black;
+            margin: 10px;
+        }
+        
+        .cmpltBtn {
+            background-color: cadetblue;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+        }
+        
+        .deleteBtn {
+            background-color: deeppink;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+        }
+        
+        .todo li {
+            flex: 1;
+            padding: 0px 10px;
+        }
+        
+        .fa-trash,
+        .fa-check {
+            pointer-events: none;
+        }
+        
+        .todo-done {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBg('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBg('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBg('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBg('#000000')"></span>
+
+    </div>
+
+    <h1>To-Do List</h1>
+
+    <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button">
+          <i class="fa fa-plus-square"></i>
+        </button>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list">
+
+        </ul>
+    </div>
+
+    <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="">
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus nemo excepturi. Praesentium adipisci ut enim autem ipsam doloremque fugiat assumenda voluptatem animi modi, dolorum eveniet commodi, quibusdam corrupti itaque rerum omnis totam!
+        Ratione itaque perspiciatis sunt impedit sint laudantium, quam qui eum dolorum tempora atque minima nemo! Exercitationem quo beatae dolorem officia voluptates vitae velit mollitia iure laboriosam quas qui commodi modi laborum tenetur consectetur,
+        tempore omnis consequuntur eligendi voluptatum perspiciatis, eius repellendus alias sapiente atque! Non fuga dolores nam dolorum, ipsum mollitia rerum, laboriosam ratione quasi nesciunt illo facilis impedit! Hic labore quia similique inventore
+        fugit? Distinctio rerum in exercitationem delectus soluta voluptatem laborum nisi tempore error ad officia aspernatur hic accusantium ipsam, voluptates eum ea possimus deserunt. Ipsa delectus illo quia debitis accusantium. Velit perferendis eveniet,
+        cum eaque inventore iste exercitationem, laudantium fuga, accusantium quo itaque esse natus magni aut voluptates quam repellendus excepturi? Laudantium debitis eligendi fugit omnis impedit sit praesentium labore eius voluptatum dolores, natus
+        sapiente earum sequi possimus delectus, libero velit aut aperiam, saepe culpa perspiciatis odio animi maiores laboriosam. Animi cum aperiam placeat earum, laboriosam quod fugiat distinctio dolor maxime quo commodi, eum quidem expedita voluptatem
+        error exercitationem blanditiis libero pariatur corrupti itaque quos optio sunt rem! Qui repellendus alias asperiores itaque quod saepe repellat aliquid eaque, tenetur neque, eveniet sit quas aperiam maiores dicta debitis voluptas laudantium officiis,
+        doloribus dolor porro molestias hic! Vel eaque voluptas, veritatis quod unde doloremque dolore nam ullam alias? Quibusdam eum repudiandae accusantium animi, sit voluptas nesciunt omnis voluptatum mollitia, asperiores unde totam, quia doloremque
+        numquam modi. A facilis laboriosam laudantium, voluptatum exercitationem fugiat aperiam fuga sequi, dolorum id consequatur possimus accusamus dicta sed beatae incidunt tempora iure quasi repudiandae. Eligendi debitis nulla ratione rerum velit
+        magnam vel minima quae incidunt ad voluptates ab, soluta voluptas aperiam? Quisquam aliquid eius quas consequuntur optio. Possimus eligendi repudiandae perspiciatis corporis dolorum aliquid cum dolore numquam reiciendis facere quam architecto
+        voluptates dicta, quisquam, eaque pariatur maiores ea itaque. Eveniet nisi eligendi quam sapiente provident reprehenderit nulla modi quaerat quidem incidunt magnam perspiciatis et fugiat doloribus tenetur, expedita omnis necessitatibus voluptas.
+        Doloremque debitis laboriosam sunt sit ad libero tempora magnam modi itaque illum, voluptas aliquam, deserunt veritatis. Ab expedita, pariatur, unde ad adipisci magni fugiat vel rerum, molestiae fugit veniam consectetur recusandae delectus assumenda?
+        Iusto architecto accusamus dolore repudiandae ea saepe ipsa neque dignissimos voluptates iure porro nobis quae, laudantium earum esse placeat corrupti dolorum delectus error impedit doloribus facilis laborum dolorem enim? Quam dolore vel, fugiat
+        earum voluptatibus reiciendis ut eos nulla accusantium delectus asperiores quia tempora eligendi atque repudiandae consequuntur quisquam vero ullam et autem quo explicabo voluptate similique! Eligendi itaque nostrum nemo incidunt! Facere possimus,
+        temporibus animi soluta vero ea tempora suscipit voluptates debitis magni accusamus laudantium. Asperiores beatae mollitia corporis perferendis esse eveniet. Quos iure ab aliquam officiis tempora cupiditate pariatur vitae explicabo sed cumque.
+        Voluptatum cumque sunt quos eum accusamus, consectetur corrupti itaque quibusdam voluptates vitae blanditiis voluptatem minima obcaecati autem esse quaerat architecto consequatur nemo.</p>
+    <script>
+        function changeBg(color) {
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+
+            let todo = document.getElementsByClassName("todo");
+
+
+            if (color == '#000000') {
+                for (let ele of txt) {
+                    ele.style.color = "white";
+                }
+            } else {
+                ele.style.color = "black";
+
+            }
+        }
+
+        //todo script
+        // selectors | Reference
+        var todoInput = document.querySelector(".todo-input");
+        var btn = document.querySelector(".todo-button");
+        var todoList = document.querySelector(".todo-list");
+
+        // Event Handlers
+        btn.onclick = create;
+        todoList.onclick = performAction;
+
+        var data;
+        // Functions
+        function create(e) {
+            e.preventDefault();
+            data = todoInput.value;
+            console.log(data);
+            data = data.trim();
+            if (data != "") {
+                var newDiv = document.createElement("div");
+                newDiv.classList.add("todo");
+
+                var newLi = document.createElement("li");
+                newLi.classList.add("todo-item");
+                newLi.innerText = data;
+                newDiv.appendChild(newLi);
+
+                var cmpltBtn = document.createElement("button");
+                cmpltBtn.classList.add("cmpltBtn");
+                cmpltBtn.innerHTML = '<i class="fa fa-check " aria-hidden="true"></i>';
+                newDiv.appendChild(cmpltBtn);
+
+                var deleteBtn = document.createElement("button");
+                deleteBtn.classList.add("deleteBtn");
+                deleteBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+                newDiv.appendChild(deleteBtn);
+
+                todoList.appendChild(newDiv);
+                todoInput.value = "";
+            } else {
+                alert("Box can not be blank");
+            }
+        }
+
+        function performAction(e) {
+            var item = e.target;
+            // console.log(item);
+
+            if (item.classList[0] == "cmpltBtn") {
+                // console.log("Cmplete Button pressed");
+                var parent = item.parentElement;
+                parent.classList.toggle("todo-done");
+            }
+            if (item.classList[0] == "deleteBtn") {
+                var parent = item.parentElement;
+                // console.log(parent);
+                parent.remove();
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
